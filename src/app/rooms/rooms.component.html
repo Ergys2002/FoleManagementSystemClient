@@ -1,0 +1,60 @@
+
+<body>
+<app-navbar></app-navbar>
+
+<section class="packages-area">
+    <div class="container">
+        <div class="row">
+            <div class="menu-content px-5">
+                <div class="title-p">
+                    <h1 class="mb-10">Building {{building_id}} Floor {{floor_id}}</h1>
+                </div>
+            </div>
+        </div>
+        <div class="packages-p">
+            <div class="container">
+                <div *ngIf="rooms" class="row">
+                  <div  *ngFor="let room of rooms" class="col-md-4 col-sm-12 px-3 mt-3">
+                    <div  class="single-destination">
+                      <div class="thumb-p">
+                        <img
+                          src="./assets/434381604.jpg"
+                          alt=""
+                          class="destination-image"
+                        />
+                      </div>
+                      <div class="details-p">
+                        <h4 class="destination-title">{{room.id}}</h4>
+                        <ul class="package-info">
+                          <li>
+                            <span class="info-label">Room Type</span>
+                            <span class="info-value">{{room.tipi}}</span>
+                          </li>
+                          <li>
+                            <span class="info-label">Capacity</span>
+                            <span class="info-value">{{room.kapaciteti}}</span>
+                          </li>
+                          <li>
+                            <span class="info-label">Taken</span>
+                            <span class="info-value">{{room.zene}}</span>
+                          </li>
+                          <li>
+                            <span class="info-label">Students in the room</span>
+                            <span class="info-value">{{room.studente_ne_dhome}}</span>
+                          </li>
+                          <li>
+                              <a routerLink="/room">
+                            <button (click)="openRoom(room.id)" class="button-17" role="button">Details</button>
+                              </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+

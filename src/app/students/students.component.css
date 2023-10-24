@@ -1,0 +1,108 @@
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 1.1em;
+  font-family: sans-serif;
+  min-width: 500px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+button {
+  padding: 8px 24px;
+  border: 0;
+  border-radius: 100px;
+  background-color: #2ba8fb;
+  color: #ffffff;
+  font-weight: Bold;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+button:hover {
+  background-color: #6fc5ff;
+  box-shadow: 0 0 20px #6fc5ff50;
+  transform: scale(1.1);
+}
+
+button:active {
+  background-color: #3d94cf;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  box-shadow: none;
+  transform: scale(0.98);
+}
+
+
+/* Search bar */
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Style for the search input */
+.search-input {
+  padding: 9px;
+  border: 1px solid #ccc;
+  border-radius: 100px;
+  outline: none;
+  width: 300px; /* Adjust the width as needed */
+}
+
+/* Style for the search button */
+.search-button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  padding: 10px 15px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* Hover effect for the search button */
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  /* border: 2px solid black; */
+  text-align: center;
+}
+th, td {
+  /* border: 2px solid black; */
+  padding: 10px;
+  text-align: center;
+}
+
+

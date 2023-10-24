@@ -1,0 +1,37 @@
+.container {
+  margin: 0;
+}
+
+.attribute {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.description {
+  font-weight: bold;
+}
+
+.titulli{
+  text-align: center;
+  font-size: 35px;
+}
+
+.dhomaData {
+  display: flex;
+  justify-content: center; /* Horizontally center the flex items */
+}
+/* Add more styles as needed */
+
+.data {
+  flex: 1; /* Each box takes an equal amount of space */
+  max-width: 50%; /* To prevent one box from taking the entire width */
+  padding: 10px;
+  text-align: center; /* Center the content within each box */
+  background-color: #e0e0e0;
+  border: 1px solid #999;
+}
+
+.dhomaDescription{
+
+  text-align: left;
+}

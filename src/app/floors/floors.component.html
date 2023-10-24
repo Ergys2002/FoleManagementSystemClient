@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+
+<div class="slider-container">
+<div class="slider">
+  <input type="radio" name="testimonial" id="t-1" checked>
+  <input type="radio" name="testimonial" id="t-2">
+  <input type="radio" name="testimonial" id="t-3">
+  <input type="radio" name="testimonial" id="t-4">
+  <input type="radio" name="testimonial" id="t-5">
+  <input type="radio" name="testimonial" id="t-6">
+  <input type="radio" name="testimonial" id="t-7">
+  <input type="radio" name="testimonial" id="t-8">
+  <input type="radio" name="testimonial" id="t-9">
+  <div class="testimonials">
+    <ng-container *ngFor="let floor of floors; let i = index">
+      <input type="radio" [id]="'t-' + (i+1)">
+      <label class="item" [for]="'t-' + (i+1)">
+        <div class="info-disponible">
+          <div class="kati-info-container">
+            <div class="kati">Floor {{floor.kati}}</div>
+            <div *ngIf="floor.apartamenteFree==0" class="kati-info-red">Out of rooms</div>
+            <div *ngIf="floor.apartamenteFree!=0" class="kati-info-green">Available rooms</div>
+          </div>
+          <div class="disponible">
+            <p>{{floor.apartamenteTotal - floor.apartamenteFree}}/{{floor.apartamenteTotal}}</p>
+          </div>
+        </div>
+        <a routerLink="/rooms">
+          <button (click)="openFloor(building, floor.kati)" class="button-3" role="button">Open Floor</button>
+        </a>
+      </label>
+    </ng-container>
+  </div>
+</div>
+</div>

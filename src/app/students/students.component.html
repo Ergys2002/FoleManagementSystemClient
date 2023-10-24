@@ -1,0 +1,38 @@
+<app-navbar></app-navbar>
+<div class = "container-fluid custom-c">
+<div class="search-container">
+  <input type="text" class="search-input" placeholder="Search...">
+  <button class="search-button">Search</button>
+</div>
+
+  <div class="student-register">
+    <button>Register Student</button>
+  </div>
+
+<!-- Fund search bar -->
+
+<table class="styled-table">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Emri</th>
+    <th>Dhoma</th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody *ngIf="students" id="table-body">
+  <tr *ngFor="let student of students">
+    <td>{{student.id}}</td>
+    <td>{{student.emriDheMbiemri}}</td>
+    <td>{{student.dhoma_id}}</td>
+    <td>
+      <a routerLink="">
+        <button type="button" value="submit" class="button">Transfero</button>
+      </a>
+    </td>
+    <td><button (click)="deleteStudent(student.id)" type="button" value="submit" class="button" style="background-color: brown;">Delete</button></td>
+  </tr>
+  </tbody>
+</table>
+</div>
